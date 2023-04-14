@@ -1,7 +1,7 @@
 export function getVersion(): Result {
     return {
         version: 1,
-        text: "v1.1.0",
+        text: "v1.2.0",
     };
 }
 
