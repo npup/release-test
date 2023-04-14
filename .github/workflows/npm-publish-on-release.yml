@@ -1,4 +1,4 @@
-name: Publish package to GitHub Packages
+name: On creating a release, publish package to npm
 on:
     release:
         types: [published]
@@ -15,9 +15,6 @@ jobs:
               with:
                   node-version: "18.x"
                   registry-url: "https://registry.npmjs.org"
-                  #registry-url: "https://npm.pkg.github.com"
-                  # Defaults to the user or organization that owns the workflow file
-                  #scope: "@npup"
             - run: npm ci
             - run: npm run build
             - run: npm publish --access public
